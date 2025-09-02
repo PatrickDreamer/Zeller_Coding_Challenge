@@ -35,12 +35,44 @@ Total expected: $249.00
 SKUs Scanned: atv, ipd, ipd, atv, ipd, ipd, ipd
 Total expected: $2718.95
 
-Notes on implementation:
+## Development
 
-- use **Typescript**
-- don't build guis etc, we're more interested in your approach to solving the given task, not how shiny it looks
-- don't worry about making a command line interface to the application
-- don't use any frameworks
-- do include unit tests
+This project is implemented in **TypeScript** with **Jest** tests.
 
-When you've finished, send through the link to your github-repo.
+## Requirements
+- Node.js v20 (defined in `.nvmrc`)
+
+You can use [nvm](https://github.com/nvm-sh/nvm) to easily switch:
+
+```bash
+nvm use 20
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Available scripts
+
+```json
+"scripts": {
+  "test": "jest",
+  "coverage": "jest --coverage",
+  "build": "tsc",
+  "start": "ts-node src/index.ts"
+}
+```
+
+`npm run test` → Run unit tests.
+`npm run coverage` → Run tests with coverage report.
+`npm run build` → Compile TypeScript into `dist/`.
+`npm run start` → Run the app directly with `ts-node`.
+
+---
+
+## Notes
+
+* GUI or CLI is not included in this repo.
+* Only TypeScript is used (no frameworks).
+* Unit tests are included.
