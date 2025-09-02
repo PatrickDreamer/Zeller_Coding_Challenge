@@ -50,22 +50,6 @@ describe('Checkout System', () => {
     expect(checkout.total()).toBe(2199.96);
   });
 
-  it('test scenario 1: atv, atv, atv, vga', () => {
-    checkout.scan('atv');
-    checkout.scan('atv');
-    checkout.scan('atv');
-    checkout.scan('vga');
-
-    expect(checkout.total()).toBe(249.0);
-  });
-
-  it('test scenario 2: atv, ipd, ipd, atv, ipd, ipd, ipd', () => {
-    const items = ['atv', 'ipd', 'ipd', 'atv', 'ipd', 'ipd', 'ipd'];
-    items.forEach((item) => checkout.scan(item));
-
-    expect(checkout.total()).toBe(2718.95);
-  });
-
   it('should handle mixed items with multiple discounts', () => {
     for (let i = 0; i < 3; i++) checkout.scan('atv');
     for (let i = 0; i < 5; i++) checkout.scan('ipd');

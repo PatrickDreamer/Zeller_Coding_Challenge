@@ -64,15 +64,7 @@ npm install
 }
 ```
 
-`npm run test` → Run unit tests.
-`npm run coverage` → Run tests with coverage report.
-`npm run build` → Compile TypeScript into `dist/`.
-`npm run start` → Run the app directly with `ts-node`.
-
----
-
-## Notes
-
-* GUI or CLI is not included in this repo.
-* Only TypeScript is used (no frameworks).
-* Unit tests are included.
+* **`npm run test`** → Run unit tests. 
+* **`npm run coverage`** → Run tests with coverage report. 
+* **`npm run build`** → Compile TypeScript into `dist/`. 
+* **`npm run start`** → Run the app directly with `ts-node`.
